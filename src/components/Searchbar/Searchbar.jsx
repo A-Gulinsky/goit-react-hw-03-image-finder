@@ -10,7 +10,7 @@ import { AiOutlineSearch } from 'react-icons/ai'
 // emotion
 import { SearchbarForm,Input,Button } from "./Searchbar.styled"
 
-export class Searchbar extends Component {
+class Searchbar extends Component {
 
   state = {
     searchQuery: ''
@@ -48,4 +48,4 @@ export class Searchbar extends Component {
   }
 }
 
-
+export default Searchbar

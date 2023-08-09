@@ -6,7 +6,7 @@ import { Backdrop,ModalWindow } from './Modal.styled'
 
 const rootModal = document.querySelector('#root-modal')
 
-export class Modal extends Component {
+class Modal extends Component {
 
   componentDidMount() {
     window.addEventListener(`keydown`, this.handleKeyDown)
@@ -45,3 +45,5 @@ export class Modal extends Component {
 Modal.propTypes = {
   largeImg: PropTypes.string,
 }
+
+export default Modal

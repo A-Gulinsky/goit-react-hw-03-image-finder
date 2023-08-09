@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types'
 
 // loader
-import { Loader } from "components/Loader/Loader"
+import Loader from 'components/Loader'
 
 // emotion
 import { LoadMore } from './Button.styled'
 
-export const Button = ({onClick, isLoad}) => {
+const Button = ({onClick, isLoad}) => {
   
   return (
     <>
@@ -19,3 +19,5 @@ Button.propTypes = {
   onClick: PropTypes.func,
   isLoad: PropTypes.bool,
 }
+
+export default Button

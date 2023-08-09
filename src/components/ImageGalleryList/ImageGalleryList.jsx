@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types'
 
-import { ImageGalleryItem } from "components/ImageGalleryItem/ImageGalleryItem"
+import ImageGalleryItem from "components/ImageGalleryItem"
 
 // emotion
 import { Ul ,Li } from './ImageGalleryList.styled'
 
-export const ImageGalleryList = ({ items }) => {
+const ImageGalleryList = ({ items }) => {
 
   return (
     <Ul>
@@ -21,3 +21,5 @@ export const ImageGalleryList = ({ items }) => {
 ImageGalleryList.propTypes = {
   items: PropTypes.array.isRequired,
 }
+
+export default ImageGalleryList

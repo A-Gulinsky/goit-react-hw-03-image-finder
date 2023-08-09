@@ -1,7 +1,7 @@
 import { Component } from 'react'
 
-import { Searchbar } from './Searchbar/Searchbar'
-import ImageGallery from './ImageGallery/ImageGallery'
+import Searchbar from './Searchbar'
+import ImageGallery from './ImageGallery'
 
 // toastify
 import { ToastContainer, toast } from 'react-toastify';

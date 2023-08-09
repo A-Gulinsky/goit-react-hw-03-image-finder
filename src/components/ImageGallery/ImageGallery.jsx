@@ -1,8 +1,8 @@
 import { PureComponent } from "react";
 
-import { ImageGalleryList } from "components/ImageGalleryList/ImageGalleryList";
-import { Button } from "components/Button/Button";
-import { Loader } from "components/Loader/Loader";
+import ImageGalleryList from "components/ImageGalleryList";
+import Button from "components/Button";
+import Loader from "components/Loader";
 
 // toast
 import { toast } from 'react-toastify'

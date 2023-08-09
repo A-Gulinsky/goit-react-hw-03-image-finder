@@ -1,12 +1,12 @@
 import { Component } from "react";
 import PropTypes from 'prop-types'
 
-import { Modal } from "components/Modal/Modal";
+import Modal from "components/Modal";
 
 // emotion
 import { Img } from "./ImageGalleryItem.styled";
 
-export class ImageGalleryItem extends Component {
+class ImageGalleryItem extends Component {
   state = {
     showModal: false
   }
@@ -38,3 +38,5 @@ ImageGalleryItem.propTypes = {
     largeImageURL: PropTypes.string,
   })
 }
+
+export default ImageGalleryItem
