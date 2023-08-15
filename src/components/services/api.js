@@ -4,7 +4,7 @@ import {toast} from 'react-toastify'
 const BASE_URL = `https://pixabay.com/api/`
 const API_KEY = `33943342-a062799c31b03d09b9648bb90`
 
-async function fetchTest(searchQuery,page) {
+async function fetchAPI(searchQuery,page) {
 
   const options = new URLSearchParams({
     key: API_KEY,
@@ -31,4 +31,4 @@ async function fetchTest(searchQuery,page) {
   }
 }
 
-export default fetchTest
+export default fetchAPI

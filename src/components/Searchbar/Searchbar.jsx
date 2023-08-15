@@ -19,7 +19,7 @@ class Searchbar extends Component {
   handleSubmit = (values,actions) => {
     const { searchQuery } = values
 
-    this.props.onSubmit(searchQuery.trim())
+    this.props.onSubmit(searchQuery.toLowerCase().trim())
   }
 
   render() {

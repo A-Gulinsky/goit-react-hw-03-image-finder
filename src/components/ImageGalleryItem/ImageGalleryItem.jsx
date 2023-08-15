@@ -1,6 +1,7 @@
 import { Component } from "react";
 import PropTypes from 'prop-types'
 
+// modal
 import Modal from "components/Modal";
 
 // emotion

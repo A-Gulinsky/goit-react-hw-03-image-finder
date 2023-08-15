@@ -1,5 +1,7 @@
 import { PureComponent } from "react";
+import PropTypes from 'prop-types'
 
+// components
 import ImageGalleryList from "components/ImageGalleryList";
 import Button from "components/Button";
 import Loader from "components/Loader";
@@ -8,7 +10,7 @@ import Loader from "components/Loader";
 import { toast } from 'react-toastify'
 
 // api
-import fetchTest from "components/services/api";
+import fetchAPI from "components/services/api";
 
 // emotion
 import { GalleryBox } from "./ImageGallery.styled";
@@ -37,14 +39,12 @@ class ImageGallery extends PureComponent {
           loader: true
         })
 
-        const data = await fetchTest(currentQuery, 1)
+        const data = await fetchAPI(currentQuery, 1)
 
         if (!data.hits.length) {
           this.setState({loader: false})
           throw new Error(`No results found for your search`)
         }
-
-
 
         this.setState({
           totalHits: data.totalHits,
@@ -59,10 +59,9 @@ class ImageGallery extends PureComponent {
       const prevPage = prevState.page
 
       if (currentPage !== prevPage) {
-        console.log(`Страница обновилась`)
 
         this.setState({loader: true})
-        const data = await fetchTest(currentQuery, currentPage)
+        const data = await fetchAPI(currentQuery, currentPage)
         this.setState(state => ({ hits: [...state.hits, ...data.hits], loader: false }))
       }
 
@@ -98,6 +97,10 @@ class ImageGallery extends PureComponent {
       </GalleryBox>
     )
   }
+}
+
+ImageGallery.propTypes = {
+  searchQuery: PropTypes.string.isRequired,
 }
 
 export default ImageGallery
