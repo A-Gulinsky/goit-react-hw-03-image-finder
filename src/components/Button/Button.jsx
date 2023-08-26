@@ -10,7 +10,7 @@ const Button = ({onClick, isLoad}) => {
   
   return (
     <>
-      {isLoad ? <Loader />: <LoadMore type="button" onClick={onClick}>Load More</LoadMore>}
+      {isLoad ? <Loader /> : <LoadMore type="button" onClick={onClick}>Load More</LoadMore>}
     </>
   )
 }
